@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/context/AuthContext';
 import { HardHat, ArrowRight } from 'lucide-react';
+import Logo  from '@/assets/logo.png'
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -32,11 +33,15 @@ export default function Login() {
         </div>
         <div className="relative z-10 flex flex-col justify-center px-12 lg:px-20">
           <div className="mb-8">
-            <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center mb-6">
-              <HardHat className="w-8 h-8 text-accent-foreground" />
+            <div className="w-20 h-16 rounded-2xl bg-white flex items-center justify-center mb-6">
+              <img
+                src={Logo}
+                alt="Belfast Renovations Logo"
+                className="w-20 h-16 object-contain"
+              />
             </div>
             <h1 className="font-display text-4xl lg:text-5xl font-bold text-white mb-4">
-              BuildCraft
+              BELFAST RENOVATIONS
             </h1>
             <p className="text-xl text-white/70">
               Client Portal
@@ -136,16 +141,6 @@ export default function Login() {
               Create one
             </Link>
           </p>
-
-          <div className="mt-8 pt-8 border-t text-center">
-            <p className="text-xs text-muted-foreground mb-2">
-              Demo Accounts:
-            </p>
-            <div className="text-xs text-muted-foreground space-y-1">
-              <p><span className="font-medium text-foreground">Admin:</span> james@buildcraft.com</p>
-              <p><span className="font-medium text-foreground">Client:</span> sarah@example.com</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

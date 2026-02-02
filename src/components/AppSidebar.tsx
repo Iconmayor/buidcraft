@@ -27,6 +27,7 @@ import {
 import { useAuth } from '@/context/AuthContext';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import Logo  from '@/assets/logo.png';
 
 const clientNavItems = [
   { title: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
@@ -56,15 +57,19 @@ export function AppSidebar() {
     <Sidebar className="border-r-0">
       <SidebarHeader className="p-4 border-b border-sidebar-border">
         <Link to={isAdmin ? '/admin' : '/dashboard'} className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-            <HardHat className="w-5 h-5 text-accent-foreground" />
+          <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
+            <img
+              src={Logo}
+              alt="Belfast Renovations Logo"
+              className="w-20 h-16 object-contain"
+            />
           </div>
           {!isCollapsed && (
             <div>
               <h1 className="font-display text-lg font-semibold text-sidebar-foreground">
-                BuildCraft
+                BELFAST
               </h1>
-              <p className="text-xs text-sidebar-foreground/60">Client Portal</p>
+              <p className="text-xs text-sidebar-foreground/60">Renovation</p>
             </div>
           )}
         </Link>

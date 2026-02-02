@@ -98,7 +98,7 @@ export const mockProjects: Project[] = [
         stage: 'planning',
         note: 'Initial planning completed. Materials ordered and delivery scheduled for next week.',
         images: [],
-        createdAt: '2024-01-20',
+        createdAt: '2026-01-20',
       },
       {
         id: 'upd-2',
@@ -107,7 +107,7 @@ export const mockProjects: Project[] = [
         images: [
           { id: 'prog-1', url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800', caption: 'Demolition complete', stage: 'in_progress', uploadedAt: '2024-01-28' },
         ],
-        createdAt: '2024-01-28',
+        createdAt: '2026-01-28',
       },
     ],
     messages: [
@@ -115,8 +115,8 @@ export const mockProjects: Project[] = [
       { id: 'msg-2', projectId: 'proj-1', senderId: 'admin-1', senderName: 'James Rodriguez', senderRole: 'admin', content: 'Hi Sarah! The cabinets arrived yesterday. We\'ll begin installation tomorrow morning.', timestamp: '2024-01-25T14:15:00' },
       { id: 'msg-3', projectId: 'proj-1', senderId: 'client-1', senderName: 'Sarah Mitchell', senderRole: 'client', content: 'That\'s great news! Thank you for the update.', timestamp: '2024-01-25T14:45:00' },
     ],
-    createdAt: '2024-01-15',
-    updatedAt: '2024-01-28',
+    createdAt: '2026-01-15',
+    updatedAt: '2026-01-28',
   },
   {
     id: 'proj-2',
@@ -137,15 +137,15 @@ export const mockProjects: Project[] = [
         stage: 'planning',
         note: 'Project approved. Architectural plans being finalized with client.',
         images: [],
-        createdAt: '2024-01-22',
+        createdAt: '2026-01-22',
       },
     ],
     messages: [
       { id: 'msg-4', projectId: 'proj-2', senderId: 'admin-1', senderName: 'James Rodriguez', senderRole: 'admin', content: 'Welcome to BuildCraft! Your project has been approved. I\'ll be your project manager.', timestamp: '2024-01-21T09:00:00', isUpdate: true },
       { id: 'msg-5', projectId: 'proj-2', senderId: 'client-2', senderName: 'Michael Chen', senderRole: 'client', content: 'Thanks James! When can we schedule a walkthrough?', timestamp: '2024-01-21T11:30:00' },
     ],
-    createdAt: '2024-01-20',
-    updatedAt: '2024-01-22',
+    createdAt: '2026-01-20',
+    updatedAt: '2026-01-22',
   },
   {
     id: 'proj-3',
@@ -161,8 +161,8 @@ export const mockProjects: Project[] = [
     ],
     updates: [],
     messages: [],
-    createdAt: '2024-01-28',
-    updatedAt: '2024-01-28',
+    createdAt: '2026-01-28',
+    updatedAt: '2026-01-28',
   },
   {
     id: 'proj-4',
@@ -184,14 +184,14 @@ export const mockProjects: Project[] = [
         images: [
           { id: 'prog-2', url: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800', caption: 'Completed office', stage: 'completed', uploadedAt: '2023-12-15' },
         ],
-        createdAt: '2023-12-15',
+        createdAt: '2026-01-25',
       },
     ],
     messages: [
       { id: 'msg-6', projectId: 'proj-4', senderId: 'admin-1', senderName: 'James Rodriguez', senderRole: 'admin', content: 'Congratulations! Your home office is complete. Please let us know if you need anything.', timestamp: '2023-12-15T16:00:00', isUpdate: true },
     ],
-    createdAt: '2023-11-01',
-    updatedAt: '2023-12-15',
+    createdAt: '2026-01-11',
+    updatedAt: '2026-01-15',
   },
 ];
 

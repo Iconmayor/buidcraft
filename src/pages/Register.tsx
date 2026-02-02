@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/context/AuthContext';
 import { HardHat, ArrowRight, ArrowLeft } from 'lucide-react';
+import Logo  from '@/assets/logo.png'
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -35,12 +36,16 @@ export default function Register() {
 
         <div className="bg-card rounded-2xl shadow-card p-8 border border-border/50">
           <div className="text-center mb-8">
-            <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mx-auto mb-4">
-              <HardHat className="w-7 h-7 text-accent-foreground" />
+            <div className="w-30 h-18 rounded-xl bg-white flex items-center justify-center mx-auto mb-4">
+              <img
+                src={Logo}
+                alt="Belfast Renovations Logo"
+                className="w-20 h-16 object-contain"
+              />
             </div>
             <h1 className="font-display text-2xl font-semibold mb-2">Create Account</h1>
             <p className="text-muted-foreground">
-              Join BuildCraft to start your project
+              Join Belfast Renovations to start your project
             </p>
           </div>
 
