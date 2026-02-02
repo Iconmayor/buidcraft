@@ -18,7 +18,17 @@ export interface ProjectImage {
 
 export type ProjectStatus = 'pending' | 'accepted' | 'in_progress' | 'completed';
 export type ProjectStage = 'planning' | 'in_progress' | 'finishing' | 'completed';
-export type ProjectType = 'kitchen' | 'restaurant' | 'office' | 'home_renovation' | 'bathroom' | 'commercial';
+export type ProjectType =
+  | 'kitchen'
+  | 'bathroom_makeover'
+  | 'office'
+  | 'home_extension'
+  | 'carpentry'
+  | 'home_renovation'
+  | 'loft_conversion'
+  | 'roofers'
+  | 'damp_proofing'
+  | 'plaster';
 
 export interface Message {
   id: string;
@@ -121,7 +131,7 @@ export const mockProjects: Project[] = [
   {
     id: 'proj-2',
     title: 'Downtown Restaurant Build-Out',
-    type: 'restaurant',
+    type: 'office',
     description: 'New restaurant space requiring full build-out including commercial kitchen, dining area, and bar. Industrial chic aesthetic with exposed brick and modern fixtures.',
     status: 'accepted',
     stage: 'planning',
@@ -150,7 +160,7 @@ export const mockProjects: Project[] = [
   {
     id: 'proj-3',
     title: 'Master Bathroom Remodel',
-    type: 'bathroom',
+    type: 'bathroom_makeover',
     description: 'Luxury master bathroom renovation with walk-in shower, freestanding tub, and double vanity. Prefer marble and gold accents.',
     status: 'pending',
     stage: 'planning',
@@ -167,7 +177,7 @@ export const mockProjects: Project[] = [
   {
     id: 'proj-4',
     title: 'Home Office Conversion',
-    type: 'home_renovation',
+    type: 'office',
     description: 'Converting spare bedroom into professional home office. Need built-in shelving, proper lighting, and soundproofing.',
     status: 'completed',
     stage: 'completed',
@@ -197,11 +207,15 @@ export const mockProjects: Project[] = [
 
 export const projectTypeLabels: Record<ProjectType, string> = {
   kitchen: 'Kitchen',
-  restaurant: 'Restaurant',
+  bathroom_makeover: 'Bathroom Makeover',
   office: 'Office',
+  home_extension: 'Home Extension',
+  carpentry: 'Carpentry',
   home_renovation: 'Home Renovation',
-  bathroom: 'Bathroom',
-  commercial: 'Commercial',
+  loft_conversion: 'Loft Conversion',
+  plaster: 'Plaster',
+  roofers: "Roofers",
+  damp_proofing: "Damp Proofing"
 };
 
 export const projectStatusLabels: Record<ProjectStatus, string> = {
