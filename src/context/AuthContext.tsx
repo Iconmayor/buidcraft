@@ -4,7 +4,7 @@ import { User, mockUsers } from '@/data/mockData';
 interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
-  login: (email: string, password: string) => boolean;
+  login: (email: string, password: string) => User | null;
   logout: () => void;
   switchRole: (role: 'client' | 'admin') => void;
 }
@@ -14,16 +14,17 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 
-  const login = (email: string, _password: string) => {
+  const login = (email: string, _password: string): User | null => {
     // Mock login - find user by email or default to client
     const foundUser = mockUsers.find(u => u.email === email);
     if (foundUser) {
       setUser(foundUser);
-      return true;
+      return foundUser;
     }
     // Default to first client for demo
-    setUser(mockUsers[0]);
-    return true;
+    const defaultUser = mockUsers[0];
+    setUser(defaultUser);
+    return defaultUser;
   };
 
   const logout = () => {

@@ -16,6 +16,8 @@ import CreateProject from "./pages/CreateProject";
 import ProjectDetail from "./pages/ProjectDetail";
 import ProjectList from "./pages/ProjectList";
 import AdminProjectList from "./pages/AdminProjectList";
+import AdminUsers from "./pages/AdminUsers";
+import AdminMessages from "./pages/AdminMessages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,7 +47,8 @@ const App = () => (
               <Route path="/admin/pending" element={<AdminProjectList />} />
               <Route path="/admin/active" element={<AdminProjectList />} />
               <Route path="/admin/completed" element={<AdminProjectList />} />
-              <Route path="/admin/clients" element={<AdminDashboard />} />
+              <Route path="/admin/messages" element={<AdminMessages />} />
+              <Route path="/admin/clients" element={<AdminUsers />} />
               
               <Route path="*" element={<NotFound />} />
             </Routes>
