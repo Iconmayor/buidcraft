@@ -39,6 +39,7 @@ const adminNavItems = [
   { title: 'Pending Requests', url: '/admin/pending', icon: Clock },
   { title: 'Active Projects', url: '/admin/active', icon: HardHat },
   { title: 'Completed', url: '/admin/completed', icon: CheckCircle },
+  { title: 'Messages', url: '/admin/messages', icon: MessageSquare },
   { title: 'All Clients', url: '/admin/clients', icon: Users },
 ];
 

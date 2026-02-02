@@ -14,8 +14,10 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (login(email, password)) {
-      navigate('/dashboard');
+    const user = login(email, password);
+    if (user) {
+      // Route based on user role
+      navigate(user.role === 'admin' ? '/admin' : '/dashboard');
     }
   };
 
@@ -136,9 +138,13 @@ export default function Login() {
           </p>
 
           <div className="mt-8 pt-8 border-t text-center">
-            <p className="text-xs text-muted-foreground">
-              Demo: Use any email to login. Switch between Client and Admin roles in the sidebar.
+            <p className="text-xs text-muted-foreground mb-2">
+              Demo Accounts:
             </p>
+            <div className="text-xs text-muted-foreground space-y-1">
+              <p><span className="font-medium text-foreground">Admin:</span> james@buildcraft.com</p>
+              <p><span className="font-medium text-foreground">Client:</span> sarah@example.com</p>
+            </div>
           </div>
         </div>
       </div>
