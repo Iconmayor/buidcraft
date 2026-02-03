@@ -125,7 +125,7 @@ export function AppSidebar() {
           </div>
         )}
         <div className="space-y-2">
-          <Button
+          {/* <Button
             variant="ghost"
             size="sm"
             className="w-full justify-start text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent"
@@ -133,7 +133,7 @@ export function AppSidebar() {
           >
             <Users className="w-4 h-4 mr-2" />
             {!isCollapsed && `Switch to ${isAdmin ? 'Client' : 'Admin'}`}
-          </Button>
+          </Button> */}
           <Button
             variant="ghost"
             size="sm"

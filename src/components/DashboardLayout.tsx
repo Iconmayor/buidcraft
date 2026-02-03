@@ -30,14 +30,14 @@ export function DashboardLayout({ children, title }: DashboardLayoutProps) {
                 {title}
               </h1>
             )}
-            <div className="ml-auto flex items-center gap-4">
+            {/* <div className="ml-auto flex items-center gap-4">
               <Button variant="ghost" size="icon" className="relative">
                 <Bell className="h-5 w-5" />
                 <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-accent text-[10px] font-medium flex items-center justify-center text-accent-foreground">
                   3
                 </span>
               </Button>
-            </div>
+            </div> */}
           </header>
           <main className="flex-1 p-6">
             {children}

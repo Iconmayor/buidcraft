@@ -83,8 +83,12 @@ export default function Login() {
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           <div className="lg:hidden text-center mb-8">
-            <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mx-auto mb-4">
-              <HardHat className="w-7 h-7 text-accent-foreground" />
+            <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center mx-auto mb-4">
+              <img
+                src={Logo}
+                alt="Belfast Renovations Logo"
+                className="w-20 h-16 object-contain"
+              />
             </div>
             <h1 className="font-display text-2xl font-bold">BuildCraft</h1>
             <p className="text-muted-foreground">Client Portal</p>
